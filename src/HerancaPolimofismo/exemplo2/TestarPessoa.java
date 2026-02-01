@@ -7,24 +7,47 @@ public class TestarPessoa {
     public static void main(String[] args) {
         DecimalFormat df = new DecimalFormat(".00 ");
 
-        PF PF1 = new PF("viana");
-        System.out.println(df.format(PF1.cacularImposto(400)));
+        PF p1 = new PF();
+        p1.setNome("Contribuinte 01");
+        p1.setRendaBruta(1000.0);
+        p1.setCpf("583.358.456-62");
 
+        PJ p2 = new PJ();
+        p2.setNome("Contribuinte 02");
+        p2.setRendaBruta(5000.0);
+        p2.setCnpj("91.403.512/0001-54");
 
-        PF PF2 = new PF("elder");
-        System.out.println(df.format(PF2.cacularImposto(2000)));
+        PF p3 = new PF();
+        p3.setNome("Contribuinte 03");
+        p3.setRendaBruta(2000.0);
+        p3.setCpf("828.277.078-70");
 
-        PF PF3 = new PF("Keven");
-        System.out.println(df.format(PF3.cacularImposto(5000)));
+        PJ p4 = new PJ();
+        p4.setNome("Contribuinte 04");
+        p4.setRendaBruta(3000.0);
+        p4.setCnpj("35.434.693/0001-05");
 
-        PJ PJ1 = new PJ("Eduardo");
-        System.out.println(df.format(PJ1.cacularImposto(111)));
+        PF p5 = new PF();
+        p5.setNome("Contribuinte 05");
+        p5.setRendaBruta(3700.0);
+        p5.setCpf("547.653.548-90");
 
-        PJ PJ2 = new PJ("Iago");
-        System.out.println(df.format(PJ2.cacularImposto(254)));
+        PJ p6 = new PJ();
+        p6.setNome("Contribuinte 06");
+        p6.setRendaBruta(4000.0);
+        p6.setCnpj("10.684.822/0001-92");
 
-        PJ PJ3 = new PJ("Margin");
-        System.out.println(df.format(PJ3.cacularImposto(1360)));
+        Contribuinte[] contribuintes = new Contribuinte[6];
+        contribuintes[0] = p1;
+        contribuintes[1] = p2;
+        contribuintes[2] = p3;
+        contribuintes[3] = p4;
+        contribuintes[4] = p5;
+        contribuintes[5] = p6;
+
+        for (Contribuinte c : contribuintes){
+            System.out.println(c.toString());
+        }
 
     }
 

@@ -2,12 +2,14 @@ package HerancaPolimofismo.exemplo2;
 
 public abstract class Contribuinte {
     private String nome;
-    private String rendaBruta;
+    private Double renda;
 
-    public Contribuinte(String nome, String rendaBruta){
+    public Contribuinte(String nome, Double rendaBruta){
         this.nome = nome;
-        this.rendaBruta = rendaBruta;
+        this.renda = rendaBruta;
     }
+
+    public Contribuinte(){}
 
     public String getNome() {
         return nome;
@@ -17,21 +19,21 @@ public abstract class Contribuinte {
         this.nome = nome;
     }
 
-    public String getRendaBruta() {
-        return rendaBruta;
+    public Double getRendaBruta() {
+        return renda;
     }
 
-    public void setRendaBruta(String rendaBruta) {
-        this.rendaBruta = rendaBruta;
+    public void setRendaBruta(Double rendaBruta) {
+        this.renda = rendaBruta;
     }
 
-    public abstract Double cacularImposto(double valorReceita);
+    public abstract Double cacularImposto();
 
     @Override
     public String toString() {
         return "Contribuinte{" +
                 "nome: " + nome + '\n' +
-                ", rendaBruta='" + rendaBruta + '\n' +
+                "rendaBruta: " + renda + '\n' +
                 '}';
     }
 }

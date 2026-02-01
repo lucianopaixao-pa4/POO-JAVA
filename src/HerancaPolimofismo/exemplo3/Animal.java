@@ -2,8 +2,8 @@ package HerancaPolimofismo.exemplo3;
 
 public class Animal {
     private String nome;
-    private Double comprimnto;
-    private Integer numeroDePatas = 4;
+    private Double comprimento;
+    private Integer numeroDePatas;
     private String cor;
     private String ambiente;
     private Double velocidade;
@@ -14,9 +14,10 @@ public class Animal {
 
     public Animal(String ambiente, Double comprimnto, String cor, String nome, Double velocidade) {
         this.ambiente = ambiente;
-        this.comprimnto = comprimnto;
+        this.comprimento = comprimento;
         this.cor = cor;
         this.nome = nome;
+        this.numeroDePatas = 4;
         this.velocidade = velocidade;
     }
 
@@ -31,11 +32,11 @@ public class Animal {
     }
 
     public Double getComprimnto() {
-        return comprimnto;
+        return comprimento;
     }
 
-    public void setComprimnto(Double comprimnto) {
-        this.comprimnto = comprimnto;
+    public void setComprimento(Double comprimento) {
+        this.comprimento = comprimento;
     }
 
     public String getCor() {
@@ -79,12 +80,12 @@ public class Animal {
     @Override
     public String toString() {
         return "Animal{" +
-                "nome: " + ambiente + '\n' +
-                "ambiente: " + nome + '\n' +
-                "comprimnto: " + comprimnto + "\n" +
-                "numeroDePatas: " + numeroDePatas + "\n" +
-                "cor: " + cor + '\n' +
-                "velocidade: " + velocidade +
+                "\nnome: " + ambiente +
+                "\nambiente: " + nome +
+                "\ncomprimento: " + comprimento +
+                "\nnumeroDePatas: " + numeroDePatas +
+                "\ncor: " + cor +
+                "\nvelocidade: " + velocidade +
                 '}';
     }
 }
